@@ -1,14 +1,9 @@
-//document.write(localStorage.getItem("p1"));
- //       document.write(localStorage.getItem("p2"));
-
 var cvs = document.getElementById("canvas");
 var ctx = cvs.getContext("2d");
 
 ctx.lineWidth=4;
 ctx.strokeStyle="rgba(242,0,0)";
 ctx.strokeRect(75,25,125,100);
-//ctx.fillStyle="rgb(242, 0, 0, 0.6)";
-//ctx.fillRect(75,25,125,100);
 
 for(var i=0;i<8;i++){
 	for(var j=0;j<8;j++){
@@ -32,8 +27,6 @@ for(var i=0;i<8;i++){
 ctx.lineWidth=4;
 ctx.strokeStyle="rgba(242,0,0)";
 ctx.strokeRect(800,475,125,100);
-//ctx.fillStyle="rgb(242, 0, 0, 0.6)";
-//ctx.fillRect(800,475,125,100);
 
 ctx.fillStyle="rgba(242,0,0)";
 ctx.font="15px 'Montserrat', sans-serif";
@@ -156,7 +149,6 @@ function rollDie1(){
 
 function rollDie2(){
 	var random2 = Math.floor(Math.random()*6)+1;
-	console.log(random2);
 	ctx.clearRect(300,100,300,200);
 	ctx.fillStyle="rgb(242,0,0)";
     ctx.font="100px 'Montserrat', sans-serif";
@@ -233,7 +225,6 @@ function startGame(object){
 	document.getElementById("p12").style["display"]="none";
 	document.getElementById("p21").style["display"]="none";
 	document.getElementById("p22").style["display"]="none";
-	console.log("hiuh");
 	ctx.clearRect(object.x,object.y,20,20);
 	if(object===p11 || object===p12){
 		object.x=245;
